@@ -9,14 +9,21 @@ Main.prototype.each=function(callback){
   }
   return this
 }
-Main.prototype.toggler =function(){
+
+Main.prototype.show =function(){
   for(var i=0;i<this.length;i++){
-    if(this.nodes[i].style.visibility!=='hidden'){
-      this.nodes[i].style.visibility='hidden'
-    }
-    else{
+    
       this.nodes[i].style.visibility='visible'
-    }
+
+  }
+  return this
+}
+Main.prototype.hide =function(){
+  for(var i=0;i<this.length;i++){
+    
+      this.nodes[i].style.visibility='hidden'
+    
+  
   }
   return this
 }
