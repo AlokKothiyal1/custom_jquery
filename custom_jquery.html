@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom JS</title>
+    <title>Custom Jquery</title>
 </head>
 <body>
-    <div>First Div</div>
-    <div>Second Div</div>
-    <div>Third Div</div>
+    <div>First</div>
+    <div>Second</div>
+    <div>Third</div>
     <div>Fourth</div>
-    <div>Fourth Div</div>
-    <script type ="module" src="custom_jquery.js"></script>
+
+    <script type="module" src="custom_jquery.js"></script>
+    <script type="module">
+        import $ from "./custom_jquery.js";
+        $("div").each(function(obj){
+            console.log(this)
+            console.log(obj.textContent)
+        }).toggler().toggler()
+    </script>
 </body>
 </html>
